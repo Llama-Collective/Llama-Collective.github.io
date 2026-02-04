@@ -179,19 +179,19 @@ export function SiteHeader() {
 
                 if (item.href === "/solutions") {
                   return (
-                    <div key={item.href}>
+                    <div key={item.href} className="flex flex-col">
                       <Link
                         href={item.href}
                         aria-current={current ? "page" : undefined}
                         className={
                           active
-                            ? "rounded-xl bg-muted px-3 py-2 text-sm font-medium text-foreground"
-                            : "rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                            ? "block w-full rounded-xl bg-muted px-3 py-2 text-sm font-medium text-foreground"
+                            : "block w-full rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                         }
                       >
                         {item.label}
                       </Link>
-                      <div className="ml-3 mt-1 border-l border-border pl-2">
+                      <div className="ml-3 mt-2 border-l border-border pl-3">
                         {solutions.map((solution) => {
                           const href = `/solutions/${solution.slug}`;
                           const isCurrent = isCurrentPage(currentPath, href);
@@ -202,8 +202,8 @@ export function SiteHeader() {
                               aria-current={isCurrent ? "page" : undefined}
                               className={
                                 isCurrent
-                                  ? "block rounded-lg bg-muted px-3 py-2 text-sm font-medium text-foreground"
-                                  : "block rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                                  ? "block w-full rounded-lg bg-muted px-3 py-2 text-sm font-medium text-foreground"
+                                  : "block w-full rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                               }
                             >
                               {solution.name}
@@ -222,8 +222,8 @@ export function SiteHeader() {
                     aria-current={current ? "page" : undefined}
                     className={
                       active
-                        ? "rounded-xl bg-muted px-3 py-2 text-sm font-medium text-foreground"
-                        : "rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                        ? "block w-full rounded-xl bg-muted px-3 py-2 text-sm font-medium text-foreground"
+                        : "block w-full rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                     }
                   >
                     {item.label}
@@ -235,7 +235,7 @@ export function SiteHeader() {
                   href={site.discordInviteUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-1 rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="mt-1 block w-full rounded-xl bg-accent px-3 py-2 text-center text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Join Discord
                 </a>
