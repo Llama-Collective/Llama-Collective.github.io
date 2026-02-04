@@ -14,11 +14,11 @@ export default function Home() {
             For Minecraft archival communities
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Practical tooling for submissions, curation, and publishing.
+            Practical tooling for archive curation and publishing.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
             {site.name} builds and maintains software that helps communities run
-            technical archives: Discord workflows, GitHub mirrors, and
+            technical Minecraft archives: Discord workflows, GitHub mirrors, and
             browseable archives on the web and in game.
           </p>
 
@@ -40,22 +40,22 @@ export default function Home() {
             <Card>
               <div className="text-sm font-semibold">Automation first</div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Communities define their own rules. The tooling handles the
-                routine work.
+                Don&apos;t exhaust your volunteers. Let our tools handle the
+                repetitive work.
               </p>
             </Card>
             <Card>
-              <div className="text-sm font-semibold">Own your archive</div>
+              <div className="text-sm font-semibold">Be independent</div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Mirrors live in community-run repos and sites, with a workflow
-                you can audit.
+                Keep your data in open formats on platforms you control. Everything is open source. No vendor
+                lock-in.
               </p>
             </Card>
             <Card>
-              <div className="text-sm font-semibold">Web + in-game</div>
+              <div className="text-sm font-semibold">User friendly</div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Publish an archive website and optionally support browsing and
-                downloads in Minecraft.
+                Make it easy for contributors to submit content and for users to
+                browse your archive with a website and in-game mod.
               </p>
             </Card>
           </div>
@@ -67,10 +67,11 @@ export default function Home() {
           <div className="flex items-end justify-between gap-6">
             <div>
               <h2 className="text-2xl font-semibold tracking-tight">
-                Solutions
+                Our solutions
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-                A small set of tools you can adopt incrementally.
+                These tools can be used together or independently to help you run a Minecraft
+                archive.
               </p>
             </div>
             <Link

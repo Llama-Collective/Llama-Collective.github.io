@@ -3,6 +3,7 @@ import { site } from "@/app/_content/site";
 import { Container } from "@/app/_components/Container";
 
 const navItems = [
+  { href: "/", label: "Home" },
   { href: "/partners", label: "Partners" },
   { href: "/solutions", label: "Solutions" },
   { href: "/faq", label: "FAQ" },
@@ -73,4 +74,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

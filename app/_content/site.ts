@@ -52,8 +52,8 @@ export const solutions: LinkCard[] = [
     logo: { kind: "text", text: "WEB", ariaLabel: "Archive Site Template" },
   },
   {
-    name: "In‑Game Archive Mod",
+    name: "Archive Downloader Mod",
     summary: "Minecraft mod for browsing and downloading archive content in game.",
-    logo: { kind: "text", text: "MOD", ariaLabel: "In-Game Archive Mod" },
+    logo: { kind: "text", text: "MOD", ariaLabel: "Archive Downloader Mod" },
   },
 ];
