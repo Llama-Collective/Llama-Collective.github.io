@@ -75,8 +75,8 @@ export function SiteHeader() {
                     aria-current={current ? "page" : undefined}
                     className={
                       active
-                        ? "py-2 font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[10px]"
-                        : "py-2 text-muted-foreground transition-colors hover:text-foreground"
+                        ? "py-2 font-medium text-foreground underline decoration-accent decoration-2 underline-offset-[10px]"
+                        : "py-2 font-medium text-muted-foreground transition-colors hover:text-foreground"
                     }
                   >
                     {item.label}
@@ -140,8 +140,8 @@ export function SiteHeader() {
                 aria-current={current ? "page" : undefined}
                 className={
                   active
-                    ? "py-2 font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[10px]"
-                    : "py-2 text-muted-foreground transition-colors hover:text-foreground"
+                    ? "py-2 font-medium text-foreground underline decoration-accent decoration-2 underline-offset-[10px]"
+                    : "py-2 font-medium text-muted-foreground transition-colors hover:text-foreground"
                 }
               >
                 {item.label}
@@ -179,8 +179,8 @@ export function SiteHeader() {
                         aria-current={current ? "page" : undefined}
                         className={
                           active
-                            ? "rounded-xl bg-muted px-3 py-2 text-sm font-semibold text-foreground"
-                            : "rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                            ? "rounded-xl bg-muted px-3 py-2 text-sm font-medium text-foreground"
+                            : "rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                         }
                       >
                         {item.label}
@@ -196,8 +196,8 @@ export function SiteHeader() {
                               aria-current={isCurrent ? "page" : undefined}
                               className={
                                 isCurrent
-                                  ? "block rounded-lg bg-muted px-3 py-2 text-sm font-semibold text-foreground"
-                                  : "block rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                                  ? "block rounded-lg bg-muted px-3 py-2 text-sm font-medium text-foreground"
+                                  : "block rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                               }
                             >
                               {solution.name}
@@ -216,8 +216,8 @@ export function SiteHeader() {
                     aria-current={current ? "page" : undefined}
                     className={
                       active
-                        ? "rounded-xl bg-muted px-3 py-2 text-sm font-semibold text-foreground"
-                        : "rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                        ? "rounded-xl bg-muted px-3 py-2 text-sm font-medium text-foreground"
+                        : "rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                     }
                   >
                     {item.label}
