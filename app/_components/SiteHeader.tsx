@@ -82,7 +82,7 @@ export function SiteHeader() {
                     {item.label}
                   </Link>
 
-                  <div className="pointer-events-none absolute left-1/2 top-full mt-2 w-[22rem] -translate-x-1/2 translate-y-1 opacity-0 transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  <div className="pointer-events-none absolute left-1/2 top-full w-[22rem] -translate-x-1/2 translate-y-1 pt-2 opacity-0 transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
                     <div
                       role="menu"
                       aria-label="Solutions"
