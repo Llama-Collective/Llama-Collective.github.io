@@ -97,7 +97,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-auto">
-                  <ActionLink href="/solutions" className="w-full">
+                  <ActionLink
+                    href={`/solutions/${solution.slug}`}
+                    className="w-full"
+                  >
                     Learn more
                   </ActionLink>
                 </div>

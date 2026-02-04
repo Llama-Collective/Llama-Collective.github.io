@@ -16,6 +16,10 @@ export type LinkCard = {
   logo: LogoMark;
 };
 
+export type SolutionCard = LinkCard & {
+  slug: string;
+};
+
 export const partners: LinkCard[] = [
   {
     name: "Storage Tech 2",
@@ -39,19 +43,22 @@ export const partners: LinkCard[] = [
   },
 ];
 
-export const solutions: LinkCard[] = [
+export const solutions: SolutionCard[] = [
   {
+    slug: "llamabot",
     name: "Llamabot",
     summary:
       "Discord bot that automates submissions, curation workflows, and publishing for archives.",
     logo: { kind: "text", text: "LB", ariaLabel: "Llamabot" },
   },
   {
+    slug: "archive-site-template",
     name: "Archive Site Template",
-    summary: "Static website template for browsing and searching an archive.",
+    summary: "Static website template for browsing an archive.",
     logo: { kind: "text", text: "WEB", ariaLabel: "Archive Site Template" },
   },
   {
+    slug: "archive-downloader-mod",
     name: "Archive Downloader Mod",
     summary: "Minecraft mod for browsing and downloading archive content in game.",
     logo: { kind: "text", text: "MOD", ariaLabel: "Archive Downloader Mod" },

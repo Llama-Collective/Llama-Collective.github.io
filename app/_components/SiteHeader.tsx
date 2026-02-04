@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef } from "react";
-import { site } from "@/app/_content/site";
+import { site, solutions } from "@/app/_content/site";
 import { Container } from "@/app/_components/Container";
 
 const navItems = [
@@ -18,6 +18,10 @@ const navItems = [
 function normalizePath(pathname: string) {
   if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
   return pathname;
+}
+
+function isCurrentPage(currentPath: string, href: string) {
+  return normalizePath(currentPath) === normalizePath(href);
 }
 
 function isActivePath(currentPath: string, href: string) {
@@ -60,11 +64,80 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-6 text-sm md:ml-auto md:flex">
           {navItems.map((item) => {
             const active = isActivePath(currentPath, item.href);
+            const current = isCurrentPage(currentPath, item.href);
+
+            if (item.href === "/solutions") {
+              return (
+                <div key={item.href} className="group relative">
+                  <Link
+                    href={item.href}
+                    aria-haspopup="menu"
+                    aria-current={current ? "page" : undefined}
+                    className={
+                      active
+                        ? "py-2 font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[10px]"
+                        : "py-2 text-muted-foreground transition-colors hover:text-foreground"
+                    }
+                  >
+                    {item.label}
+                  </Link>
+
+                  <div className="pointer-events-none absolute left-1/2 top-full mt-2 w-[22rem] -translate-x-1/2 translate-y-1 opacity-0 transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                    <div
+                      role="menu"
+                      aria-label="Solutions"
+                      className="rounded-2xl border border-border bg-background p-2 shadow-lg"
+                    >
+                      <Link
+                        href="/solutions"
+                        aria-current={
+                          isCurrentPage(currentPath, "/solutions") ? "page" : undefined
+                        }
+                        className={
+                          isCurrentPage(currentPath, "/solutions")
+                            ? "block rounded-xl bg-muted px-3 py-2 text-sm font-semibold text-foreground"
+                            : "block rounded-xl px-3 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+                        }
+                      >
+                        Overview
+                      </Link>
+
+                      <div className="my-2 h-px bg-border" />
+
+                      {solutions.map((solution) => {
+                        const href = `/solutions/${solution.slug}`;
+                        const isCurrent = isCurrentPage(currentPath, href);
+                        return (
+                          <Link
+                            key={href}
+                            href={href}
+                            aria-current={isCurrent ? "page" : undefined}
+                            className={
+                              isCurrent
+                                ? "block rounded-xl bg-muted px-3 py-2"
+                                : "block rounded-xl px-3 py-2 transition-colors hover:bg-muted"
+                            }
+                          >
+                            <div className="text-sm font-semibold text-foreground">
+                              {solution.name}
+                            </div>
+                            <div className="mt-0.5 text-xs leading-5 text-muted-foreground">
+                              {solution.summary}
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                aria-current={active ? "page" : undefined}
+                aria-current={current ? "page" : undefined}
                 className={
                   active
                     ? "py-2 font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[10px]"
@@ -77,55 +150,93 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 md:ml-4">
-          {site.discordInviteUrl ? (
-            <a
-              href={site.discordInviteUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="hidden rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background md:inline-flex"
-            >
-              Join Discord
-            </a>
-          ) : null}
+        {site.discordInviteUrl ? (
+          <a
+            href={site.discordInviteUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-4 hidden rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background md:inline-flex"
+          >
+            Join Discord
+          </a>
+        ) : null}
 
-          <details ref={mobileMenuRef} className="relative md:hidden">
-            <summary className="list-none rounded-full border border-border bg-background px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background">
-              Menu
-            </summary>
-            <div className="absolute right-0 mt-2 w-56 rounded-2xl border border-border bg-background p-2 shadow-lg">
-              <div className="flex flex-col">
-                {navItems.map((item) => {
-                  const active = isActivePath(currentPath, item.href);
+        <details ref={mobileMenuRef} className="relative ml-auto md:hidden">
+          <summary className="list-none rounded-full border border-border bg-background px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+            Menu
+          </summary>
+          <div className="absolute right-0 mt-2 w-56 rounded-2xl border border-border bg-background p-2 shadow-lg">
+            <div className="flex flex-col">
+              {navItems.map((item) => {
+                const active = isActivePath(currentPath, item.href);
+                const current = isCurrentPage(currentPath, item.href);
+
+                if (item.href === "/solutions") {
                   return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      aria-current={active ? "page" : undefined}
-                      className={
-                        active
-                          ? "rounded-xl bg-muted px-3 py-2 text-sm font-semibold text-foreground"
-                          : "rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
-                      }
-                    >
-                      {item.label}
-                    </Link>
+                    <div key={item.href}>
+                      <Link
+                        href={item.href}
+                        aria-current={current ? "page" : undefined}
+                        className={
+                          active
+                            ? "rounded-xl bg-muted px-3 py-2 text-sm font-semibold text-foreground"
+                            : "rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                        }
+                      >
+                        {item.label}
+                      </Link>
+                      <div className="ml-3 mt-1 border-l border-border pl-2">
+                        {solutions.map((solution) => {
+                          const href = `/solutions/${solution.slug}`;
+                          const isCurrent = isCurrentPage(currentPath, href);
+                          return (
+                            <Link
+                              key={href}
+                              href={href}
+                              aria-current={isCurrent ? "page" : undefined}
+                              className={
+                                isCurrent
+                                  ? "block rounded-lg bg-muted px-3 py-2 text-sm font-semibold text-foreground"
+                                  : "block rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                              }
+                            >
+                              {solution.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   );
-                })}
-                {site.discordInviteUrl ? (
-                  <a
-                    href={site.discordInviteUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                }
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={current ? "page" : undefined}
+                    className={
+                      active
+                        ? "rounded-xl bg-muted px-3 py-2 text-sm font-semibold text-foreground"
+                        : "rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                    }
                   >
-                    Join Discord
-                  </a>
-                ) : null}
-              </div>
+                    {item.label}
+                  </Link>
+                );
+              })}
+              {site.discordInviteUrl ? (
+                <a
+                  href={site.discordInviteUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-1 rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  Join Discord
+                </a>
+              ) : null}
             </div>
-          </details>
-        </div>
+          </div>
+        </details>
       </Container>
     </header>
   );

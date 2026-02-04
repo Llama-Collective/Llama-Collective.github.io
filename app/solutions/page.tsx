@@ -16,6 +16,10 @@ export default function SolutionsPage() {
           submission intake, curation, mirroring, and publishing. You can adopt
           individual tools or run it end-to-end.
         </p>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
+          Each solution has its own page with scope, integration notes, and
+          links.
+        </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {solutions.map((solution) => (
@@ -31,8 +35,14 @@ export default function SolutionsPage() {
                   </p>
                 </div>
               </div>
-              {solution.websiteUrl ? (
-                <div className="mt-auto">
+              <div className="mt-auto flex flex-col gap-2">
+                <ActionLink
+                  href={`/solutions/${solution.slug}`}
+                  className="w-full"
+                >
+                  Details
+                </ActionLink>
+                {solution.websiteUrl ? (
                   <ActionLink
                     href={solution.websiteUrl}
                     external
@@ -40,63 +50,10 @@ export default function SolutionsPage() {
                   >
                     Website
                   </ActionLink>
-                </div>
-              ) : null}
+                ) : null}
+              </div>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 grid gap-4 lg:grid-cols-2">
-          <Card>
-            <h2 className="text-base font-semibold text-foreground">Llamabot</h2>
-            <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Llamabot is the automation layer. Communities configure their own
-              archival requirements and process; the bot manages Discord and
-              publishing around those rules.
-            </p>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
-              <li>Manages Discord forums/threads for submissions and review</li>
-              <li>Maintains a GitHub repository mirror for the archive</li>
-              <li>Publishes a website from the mirrored content</li>
-              <li>Automatically optimizes images</li>
-              <li>Can optimize world downloads</li>
-              <li>
-                Analyzes attachments (for example, schematics) for metadata
-              </li>
-              <li>Built-in assistant for curator formatting and consistency</li>
-              <li>Dictionary feature and chatbot for common questions</li>
-            </ul>
-          </Card>
-
-          <Card>
-            <h2 className="text-base font-semibold text-foreground">
-              Web + in-game access
-            </h2>
-            <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Archives are easiest to use when they’re available in more than
-              one place.
-            </p>
-            <div className="mt-4 space-y-4">
-              <div>
-                <div className="text-sm font-semibold text-foreground">
-                  Archive Site Template
-                </div>
-                <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                  A static site template for browsing and searching an archive,
-                  backed by mirrored content.
-                </p>
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-foreground">
-                  In‑Game Archive Mod
-                </div>
-                <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                  A Minecraft mod that can browse and download archive content
-                  without leaving the game.
-                </p>
-              </div>
-            </div>
-          </Card>
         </div>
 
         <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">
