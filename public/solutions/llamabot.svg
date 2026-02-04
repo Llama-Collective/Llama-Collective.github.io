@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#F4F4F5" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7"/>
+
+  <!-- Accent ring -->
+  <circle cx="570" cy="150" r="86" stroke="#CBB089" stroke-width="10" opacity="0.65"/>
+  <circle cx="570" cy="150" r="56" stroke="#CBB089" stroke-width="10" opacity="0.35"/>
+
+  <!-- Minimal bot icon -->
+  <rect x="150" y="128" width="240" height="190" rx="26" stroke="#27272A" stroke-width="10"/>
+  <path d="M260 92v36" stroke="#27272A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M220 92h80" stroke="#27272A" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="220" cy="205" r="16" fill="#27272A"/>
+  <circle cx="320" cy="205" r="16" fill="#27272A"/>
+  <path d="M210 268h120" stroke="#27272A" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Subtle “message” lines -->
+  <path d="M470 292h210" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round"/>
+  <path d="M470 328h170" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+</svg>
+

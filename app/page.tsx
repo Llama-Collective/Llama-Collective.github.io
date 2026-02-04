@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/app/_components/Container";
 import { Card } from "@/app/_components/Card";
 import { LogoMark } from "@/app/_components/LogoMark";
@@ -82,9 +83,22 @@ export default function Home() {
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {solutions.map((solution) => (
-              <Card key={solution.name} className="flex flex-col gap-4">
-                <div className="flex items-center gap-3">
-                  <LogoMark logo={solution.logo} />
+              <Card
+                key={solution.name}
+                className="flex !p-0 flex-col overflow-hidden"
+              >
+                <div className="relative aspect-[16/9] w-full bg-muted/60">
+                  <Image
+                    src={solution.cardImage.src}
+                    alt={solution.cardImage.alt}
+                    fill
+                    priority={solution.slug === "llamabot"}
+                    sizes="(min-width: 768px) 320px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col gap-4 p-5">
                   <div>
                     <div className="text-sm font-semibold text-foreground">
                       {solution.name}
@@ -93,14 +107,15 @@ export default function Home() {
                       {solution.summary}
                     </p>
                   </div>
-                </div>
-                <div className="mt-auto">
-                  <ActionLink
-                    href={`/solutions/${solution.slug}`}
-                    className="w-full"
-                  >
-                    Learn more
-                  </ActionLink>
+
+                  <div className="mt-auto">
+                    <ActionLink
+                      href={`/solutions/${solution.slug}`}
+                      className="w-full"
+                    >
+                      Learn more
+                    </ActionLink>
+                  </div>
                 </div>
               </Card>
             ))}
