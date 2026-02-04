@@ -20,7 +20,9 @@ export function SiteFooter() {
             {site.description}
           </p>
           <p className="mt-4 text-xs leading-5 text-muted-foreground">
-            No funding is accepted.
+            As a community organization, Llama Collective relies on volunteers.
+            Donations are not accepted, support us by contributing code, ideas,
+            or spreading the word.
           </p>
         </div>
 

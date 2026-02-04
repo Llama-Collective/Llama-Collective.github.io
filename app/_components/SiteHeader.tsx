@@ -9,8 +9,8 @@ import { Container } from "@/app/_components/Container";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/partners", label: "Partners" },
   { href: "/solutions", label: "Solutions" },
+  { href: "/partners", label: "Partners" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ] as const;

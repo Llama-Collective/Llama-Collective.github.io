@@ -5,7 +5,7 @@ export function LogoMark({ logo, size = 44 }: { logo: LogoMarkType; size?: numbe
   if (logo.kind === "image") {
     return (
       <div
-        className="flex items-center justify-center overflow-hidden rounded-xl"
+        className="flex shrink-0 items-center justify-center overflow-hidden rounded-xl"
         style={{ width: size, height: size }}
       >
         <Image

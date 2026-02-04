@@ -166,38 +166,37 @@ export default function Home() {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <Card>
               <div className="text-sm font-semibold text-foreground">
-                1) Define your archival process
+                1. Get Llamabot set up
               </div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Decide what you accept, what metadata you require, and how you
-                review submissions.
+                Connect Llamabot to your Discord server and configure the submission workflow to match your community&apos;s needs. We offer customization and support to help you get started.
               </p>
             </Card>
             <Card>
               <div className="text-sm font-semibold text-foreground">
-                2) Llamabot runs the workflow
+                2. Migrate existing content
               </div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                It manages Discord forums/threads and keeps the process
-                consistent without extra moderator overhead.
+                Import existing archive content into the new submission system for easier management going forward. An automated parser tool can help with this process.
               </p>
             </Card>
             <Card>
               <div className="text-sm font-semibold text-foreground">
-                3) Mirror and publish
+                3. Make a website
               </div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Approved content is mirrored to a GitHub repository and
-                published to a browseable archive site.
+                Use the Archive Site Template to create a static website for
+                browsing your archive. Free on GitHub Pages, or host it
+                wherever you like.
               </p>
             </Card>
             <Card>
               <div className="text-sm font-semibold text-foreground">
-                4) Improve access
+                4. Register for mod integration
               </div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Optionally offer in-game browsing and downloads with a Minecraft
-                mod.
+                Get your archive listed in the Archive Downloader Mod so users
+                can browse and download content in-game.
               </p>
             </Card>
           </div>
@@ -206,10 +205,10 @@ export default function Home() {
             <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
               <div>
                 <div className="text-sm font-semibold text-foreground">
-                  Want to adopt the tools?
+                  Want to join the collective?
                 </div>
                 <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                  Join the Discord and we’ll talk through requirements and a
+                  Join the Discord and we’ll talk through a
                   migration plan.
                 </p>
               </div>

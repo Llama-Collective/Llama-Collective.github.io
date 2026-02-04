@@ -44,7 +44,7 @@ export const partners: LinkCard[] = [
     logo: { kind: "image", src: "/partners/wither.png", alt: "Wither Archive logo" },
   },
   {
-    name: "Autocraft",
+    name: "Autocrafting Archive",
     summary: "Autocrafting made easy. A community dedicated to building and sharing autocrafting technologies in Minecraft.",
     logo: { kind: "image", src: "/partners/autocraft.png", alt: "Autocraft logo" },
   },

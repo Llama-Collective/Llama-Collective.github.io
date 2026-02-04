@@ -13,9 +13,11 @@ export default function PartnersPage() {
           Partners
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
-          Partner communities use Llama Collective tooling to run and publish
-          technical Minecraft archives. Each community defines its own
-          requirements and process.
+          Partner communities use our tooling to run and publish
+          technical Minecraft archives, and are involved in shaping the
+          development of our open source software. We&apos;re always looking to
+          expand the collective. If your community is interested in joining,
+          please get in touch!
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
