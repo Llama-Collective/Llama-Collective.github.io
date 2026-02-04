@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <section className="border-b border-border">
-        <Container className="py-16 sm:py-20">
+        <Container className="py-8 sm:py-12">
           <p className="text-sm font-semibold text-muted-foreground">
             For Minecraft archival communities
           </p>
@@ -17,9 +17,7 @@ export default function Home() {
             Practical tooling for archive curation and publishing.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-            {site.name} builds and maintains software that helps communities run
-            technical Minecraft archives: Discord workflows, GitHub mirrors, and
-            browseable archives on the web and in game.
+            The {site.name} builds software that helps technical Minecraft communities maintain their archives: automated submission workflows, website integration, and in-game browsing tools.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -37,21 +35,21 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <Card>
+            <Card className="border-accent/40!">
               <div className="text-sm font-semibold">Automation first</div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
                 Don&apos;t exhaust your volunteers. Let our tools handle the
                 repetitive work.
               </p>
             </Card>
-            <Card>
+            <Card className="border-accent/40!">
               <div className="text-sm font-semibold">Be independent</div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
                 Keep your data in open formats on platforms you control. Everything is open source. No vendor
                 lock-in.
               </p>
             </Card>
-            <Card>
+            <Card className="border-accent/40!">
               <div className="text-sm font-semibold">User friendly</div>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
                 Make it easy for contributors to submit content and for users to
