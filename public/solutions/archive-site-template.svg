@@ -1,26 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <title>Archive Site Template</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F4F4F5"/>
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F4F4F5" />
     </linearGradient>
   </defs>
-  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7"/>
 
-  <!-- Browser window -->
-  <rect x="132" y="102" width="536" height="266" rx="24" stroke="#27272A" stroke-width="10"/>
-  <path d="M142 160h516" stroke="#27272A" stroke-width="10" opacity="0.9"/>
-  <circle cx="176" cy="132" r="10" fill="#CBB089" opacity="0.8"/>
-  <circle cx="206" cy="132" r="10" fill="#CBB089" opacity="0.55"/>
-  <circle cx="236" cy="132" r="10" fill="#CBB089" opacity="0.35"/>
+  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7" />
 
-  <!-- Layout blocks -->
-  <rect x="168" y="194" width="180" height="36" rx="12" fill="#E4E4E7"/>
-  <rect x="168" y="246" width="260" height="22" rx="10" fill="#E4E4E7"/>
-  <rect x="168" y="280" width="230" height="22" rx="10" fill="#E4E4E7"/>
+  <!-- Clean “browser + layout” illustration -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Window -->
+    <rect x="118" y="94" width="564" height="286" rx="26" fill="#FFFFFF" stroke="#18181B" stroke-width="10" />
+    <path d="M128 154h544" stroke="#18181B" stroke-width="10" opacity="0.9" />
 
-  <rect x="454" y="194" width="178" height="148" rx="18" fill="#E4E4E7"/>
-  <path d="M494 236h98" stroke="#CBB089" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
-  <path d="M494 276h70" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+    <!-- Controls -->
+    <circle cx="162" cy="124" r="10" fill="#CBB089" opacity="0.85" />
+    <circle cx="192" cy="124" r="10" fill="#CBB089" opacity="0.55" />
+    <circle cx="222" cy="124" r="10" fill="#CBB089" opacity="0.35" />
+
+    <!-- Sidebar -->
+    <rect x="146" y="182" width="158" height="170" rx="18" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="8" />
+    <path d="M172 214h98" stroke="#A1A1AA" stroke-width="10" />
+    <path d="M172 246h72" stroke="#A1A1AA" stroke-width="10" opacity="0.85" />
+    <path d="M172 278h84" stroke="#A1A1AA" stroke-width="10" opacity="0.85" />
+
+    <!-- Content -->
+    <rect x="326" y="182" width="330" height="54" rx="18" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="8" />
+    <path d="M356 210h160" stroke="#A1A1AA" stroke-width="10" />
+    <rect x="326" y="252" width="330" height="100" rx="22" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="8" />
+    <path d="M356 286h206" stroke="#A1A1AA" stroke-width="10" />
+    <path d="M356 318h142" stroke="#A1A1AA" stroke-width="10" opacity="0.85" />
+
+    <!-- Accent highlight -->
+    <path d="M528 210h82" stroke="#CBB089" stroke-width="10" opacity="0.8" />
+  </g>
 </svg>
-

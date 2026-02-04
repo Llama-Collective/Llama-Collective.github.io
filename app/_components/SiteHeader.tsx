@@ -46,16 +46,16 @@ export function SiteHeader() {
           <Image
             src="/logo.jpg"
             alt="Llama Collective logo"
-            width={36}
-            height={36}
-            className="h-9 w-9 rounded-lg object-cover ring-1 ring-border"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-xl object-cover ring-1 ring-border"
             priority
           />
           <div className="leading-tight">
-            <div className="text-sm font-semibold text-foreground">
+            <div className="text-base font-semibold tracking-tight text-foreground sm:text-lg">
               {site.name}
             </div>
-            <div className="text-xs text-muted-foreground">
+            <div className="text-sm text-muted-foreground">
               Minecraft Archive Infrastructure
             </div>
           </div>

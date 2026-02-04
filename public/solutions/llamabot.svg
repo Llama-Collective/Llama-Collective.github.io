@@ -1,26 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="1"/>
-      <stop offset="1" stop-color="#F4F4F5" stop-opacity="1"/>
-    </linearGradient>
-  </defs>
-  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7"/>
-
-  <!-- Accent ring -->
-  <circle cx="570" cy="150" r="86" stroke="#CBB089" stroke-width="10" opacity="0.65"/>
-  <circle cx="570" cy="150" r="56" stroke="#CBB089" stroke-width="10" opacity="0.35"/>
-
-  <!-- Minimal bot icon -->
-  <rect x="150" y="128" width="240" height="190" rx="26" stroke="#27272A" stroke-width="10"/>
-  <path d="M260 92v36" stroke="#27272A" stroke-width="10" stroke-linecap="round"/>
-  <path d="M220 92h80" stroke="#27272A" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="220" cy="205" r="16" fill="#27272A"/>
-  <circle cx="320" cy="205" r="16" fill="#27272A"/>
-  <path d="M210 268h120" stroke="#27272A" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
-
-  <!-- Subtle “message” lines -->
-  <path d="M470 292h210" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round"/>
-  <path d="M470 328h170" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
-</svg>
-
+<?xml version="1.0" encoding="utf-8"?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="450" viewBox="0 0 800 450" fill="none" role="img" aria-labelledby="llamabot-title" preserveAspectRatio="xMidYMid meet">
+  <ns0:title id="llamabot-title">Llamabot</ns0:title>
+  <ns0:defs>
+    <ns0:linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <ns0:stop stop-color="#FFFFFF"/>
+      <ns0:stop offset="1" stop-color="#F4F4F5"/>
+    </ns0:linearGradient>
+    <ns0:style type="text/css">
+.round { stroke-linecap: round; stroke-linejoin: round; }
+        .panel { fill: #FFFFFF; stroke: #E4E4E7; stroke-width: 8; }
+        .ink { stroke: #18181B; stroke-width: 10; }
+        .muted { stroke: #A1A1AA; stroke-width: 10; }
+        .mutedSoft { stroke: #A1A1AA; stroke-width: 10; opacity: 0.85; }
+        .mutedFaint { stroke: #A1A1AA; stroke-width: 10; opacity: 0.75; }
+        .accentRing { stroke: #CBB089; stroke-width: 10; opacity: 0.55; }
+        .accentFill { fill: #CBB089; opacity: 0.10; }
+        .accentDot { fill: #CBB089; opacity: 0.35; }
+</ns0:style>
+  </ns0:defs>
+  <ns0:rect x="0.5" y="0.5" width="800" height="450" rx="28" fill="url(#bg)" stroke="#E4E4E7"/>
+  <ns0:g class="round">
+    <ns0:g id="connectors">
+      <ns0:path d="M250 225h30" class="muted"/>
+      <ns0:path d="M270 209l22 16-22 16" class="muted"/>
+      <ns0:path d="M510 225h30" class="muted"/>
+      <ns0:path d="M530 209l22 16-22 16" class="muted"/>
+    </ns0:g>
+    <ns0:g id="step-intake" transform="translate(60, 104)">
+      <ns0:rect x="0" y="24" width="168" height="212" rx="28" class="panel"/>
+      <ns0:path d="M30 94l10 10 18-22" class="ink"/>
+      <ns0:path d="M80 98h55" class="muted"/>
+      <ns0:path d="M30 132l10 10 18-22" class="ink"/>
+      <ns0:path d="M80 136h55" class="mutedSoft"/>
+      <ns0:path d="M30 170l10 10 18-22" class="ink" opacity="0.85"/>
+      <ns0:path d="M80 174h55" class="mutedFaint"/>
+      <ns0:rect x="42" y="0" width="84" height="48" rx="18" class="panel"/>
+    </ns0:g>
+    <ns0:g id="step-ai" transform="translate(400 225)">
+      <ns0:circle cx="0" cy="0" r="88" class="accentFill"/>
+      <ns0:circle cx="0" cy="0" r="88" class="accentRing"/>
+      <ns0:text x="-10" y="14" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial" font-size="72" font-weight="800" fill="#775f00" letter-spacing="2">
+        AI
+      </ns0:text>
+      <ns0:path d="M36 -50l6 16 16 6-16 6-6 16-6-16-16-6 16-6 6-16z" fill="#775f00" opacity="0.9" stroke="#775f00" stroke-width="3"/>
+    </ns0:g>
+    <ns0:g id="step-publish" transform="translate(575 125)">
+      <ns0:rect x="0" y="0" width="168" height="212" rx="28" class="panel"/>
+      <ns0:path d="M33 40h78" class="muted"/>
+      <ns0:rect x="28" y="60" width="110" height="24" rx="12" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="8"/>
+      <ns0:rect x="28" y="104" width="110" height="80" rx="22" fill="#FFFFFF" class="muted"/>
+      <ns0:rect x="50" y="140" width="40" height="22" rx="11" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="8"/>
+      <ns0:circle cx="110" cy="130" r="9" class="accentDot"/>
+    </ns0:g>
+  </ns0:g>
+</ns0:svg>

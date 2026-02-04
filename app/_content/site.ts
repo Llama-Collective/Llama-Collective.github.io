@@ -2,7 +2,7 @@ export const site = {
   name: "Llama Collective",
   description:
     "Software infrastructure for Minecraft archival communities: submission workflows, mirrors, and browsing tools.",
-  discordInviteUrl: "",
+  discordInviteUrl: "https://discord.gg/J2M6fHYQnY",
 } as const;
 
 export type LogoMark =

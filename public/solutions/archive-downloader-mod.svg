@@ -1,23 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <title>Archive Downloader Mod</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F4F4F5"/>
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F4F4F5" />
     </linearGradient>
   </defs>
-  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7"/>
 
-  <!-- Block (Minecraft-ish) -->
-  <path d="M214 186l186-78 186 78-186 78-186-78z" fill="#E4E4E7" stroke="#27272A" stroke-width="10" stroke-linejoin="round"/>
-  <path d="M214 186v158l186 78V264l-186-78z" fill="#F4F4F5" stroke="#27272A" stroke-width="10" stroke-linejoin="round"/>
-  <path d="M586 186v158l-186 78V264l186-78z" fill="#FFFFFF" stroke="#27272A" stroke-width="10" stroke-linejoin="round"/>
+  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7" />
 
-  <!-- Download arrow -->
-  <path d="M545 122v112" stroke="#CBB089" stroke-width="14" stroke-linecap="round"/>
-  <path d="M500 198l45 45 45-45" stroke="#CBB089" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Download arrow -->
+    <path d="M560 96v120" stroke="#CBB089" stroke-width="14" />
+    <path d="M512 178l48 48 48-48" stroke="#CBB089" stroke-width="14" />
 
-  <!-- Small metadata lines -->
-  <path d="M150 110h210" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
-  <path d="M150 146h170" stroke="#A1A1AA" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+    <!-- Box (clean isometric) -->
+    <path d="M210 190l190-78 190 78-190 78-190-78z" fill="#F4F4F5" stroke="#18181B" stroke-width="10" />
+    <path d="M210 190v156l190 78V268l-190-78z" fill="#FFFFFF" stroke="#18181B" stroke-width="10" />
+    <path d="M590 190v156l-190 78V268l190-78z" fill="#FFFFFF" stroke="#18181B" stroke-width="10" opacity="0.98" />
+
+    <!-- Subtle “content” lines -->
+    <path d="M148 112h230" stroke="#A1A1AA" stroke-width="10" opacity="0.9" />
+    <path d="M148 148h172" stroke="#A1A1AA" stroke-width="10" opacity="0.75" />
+
+    <!-- Accent edge -->
+    <path d="M400 112l190 78" stroke="#CBB089" stroke-width="10" opacity="0.35" />
+  </g>
 </svg>
-
