@@ -4,6 +4,7 @@ import { ActionLink } from "@/app/_components/ActionLink";
 import { Card } from "@/app/_components/Card";
 import { Container } from "@/app/_components/Container";
 import { LogoMark } from "@/app/_components/LogoMark";
+import { getDisplayHost } from "@/app/_components/url";
 import { site, solutions } from "@/app/_content/site";
 
 const solution = solutions.find((s) => s.slug === "archive-downloader-mod");
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function ArchiveDownloaderModPage() {
   if (!solution) throw new Error('Missing solution: "archive-downloader-mod"');
+  const host = solution.websiteUrl ? getDisplayHost(solution.websiteUrl) : null;
 
   return (
     <div>
@@ -53,7 +55,7 @@ export default function ArchiveDownloaderModPage() {
           )}
           {solution.websiteUrl ? (
             <ActionLink href={solution.websiteUrl} external>
-              Website
+              {host ? `Go to ${host}` : "Website"}
             </ActionLink>
           ) : null}
         </div>

@@ -2,6 +2,7 @@ import { ActionLink } from "@/app/_components/ActionLink";
 import { Card } from "@/app/_components/Card";
 import { Container } from "@/app/_components/Container";
 import { LogoMark } from "@/app/_components/LogoMark";
+import { getDisplayHost } from "@/app/_components/url";
 import { partners, site } from "@/app/_content/site";
 
 export default function PartnersPage() {
@@ -18,33 +19,39 @@ export default function PartnersPage() {
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
-          {partners.map((partner) => (
-            <Card key={partner.name} className="flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <LogoMark logo={partner.logo} />
-                <div>
-                  <div className="text-sm font-semibold text-foreground">
-                    {partner.name}
-                  </div>
-                  <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                    {partner.summary}
-                  </p>
-                </div>
-              </div>
+          {partners.map((partner) => {
+            const host = partner.websiteUrl
+              ? getDisplayHost(partner.websiteUrl)
+              : null;
 
-              {partner.websiteUrl ? (
-                <div className="mt-auto">
-                  <ActionLink
-                    href={partner.websiteUrl}
-                    external
-                    className="w-full"
-                  >
-                    Website
-                  </ActionLink>
+            return (
+              <Card key={partner.name} className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <LogoMark logo={partner.logo} size={64} />
+                  <div>
+                    <div className="text-sm font-semibold text-foreground">
+                      {partner.name}
+                    </div>
+                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                      {partner.summary}
+                    </p>
+                  </div>
                 </div>
-              ) : null}
-            </Card>
-          ))}
+
+                {partner.websiteUrl ? (
+                  <div className="mt-auto">
+                    <ActionLink
+                      href={partner.websiteUrl}
+                      external
+                      className="w-full"
+                    >
+                      {host ? `Visit ${host}` : "Website"}
+                    </ActionLink>
+                  </div>
+                ) : null}
+              </Card>
+            );
+          })}
         </div>
 
         <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">
@@ -71,4 +78,3 @@ export default function PartnersPage() {
     </div>
   );
 }
-

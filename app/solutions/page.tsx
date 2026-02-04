@@ -2,6 +2,7 @@ import { ActionLink } from "@/app/_components/ActionLink";
 import { Card } from "@/app/_components/Card";
 import { Container } from "@/app/_components/Container";
 import { LogoMark } from "@/app/_components/LogoMark";
+import { getDisplayHost } from "@/app/_components/url";
 import { site, solutions } from "@/app/_content/site";
 
 export default function SolutionsPage() {
@@ -22,38 +23,44 @@ export default function SolutionsPage() {
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {solutions.map((solution) => (
-            <Card key={solution.name} className="flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <LogoMark logo={solution.logo} />
-                <div>
-                  <div className="text-sm font-semibold text-foreground">
-                    {solution.name}
+          {solutions.map((solution) => {
+            const host = solution.websiteUrl
+              ? getDisplayHost(solution.websiteUrl)
+              : null;
+
+            return (
+              <Card key={solution.name} className="flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <LogoMark logo={solution.logo} />
+                  <div>
+                    <div className="text-sm font-semibold text-foreground">
+                      {solution.name}
+                    </div>
+                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                      {solution.summary}
+                    </p>
                   </div>
-                  <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                    {solution.summary}
-                  </p>
                 </div>
-              </div>
-              <div className="mt-auto flex flex-col gap-2">
-                <ActionLink
-                  href={`/solutions/${solution.slug}`}
-                  className="w-full"
-                >
-                  Details
-                </ActionLink>
-                {solution.websiteUrl ? (
+                <div className="mt-auto flex flex-col gap-2">
                   <ActionLink
-                    href={solution.websiteUrl}
-                    external
+                    href={`/solutions/${solution.slug}`}
                     className="w-full"
                   >
-                    Website
+                    Details
                   </ActionLink>
-                ) : null}
-              </div>
-            </Card>
-          ))}
+                  {solution.websiteUrl ? (
+                    <ActionLink
+                      href={solution.websiteUrl}
+                      external
+                      className="w-full"
+                    >
+                      {host ? `Go to ${host}` : "Website"}
+                    </ActionLink>
+                  ) : null}
+                </div>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">

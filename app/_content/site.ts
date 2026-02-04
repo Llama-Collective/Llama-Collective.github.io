@@ -27,23 +27,26 @@ export type SolutionCard = LinkCard & {
 export const partners: LinkCard[] = [
   {
     name: "Storage Tech 2",
-    summary: "Storage system designs and references.",
-    logo: { kind: "text", text: "ST2", ariaLabel: "Storage Tech 2" },
+    summary: "The latest Minecraft storage technologies. Resources, community spaces, and tools to help you learn and develop storage technologies in Minecraft.",
+    websiteUrl: "https://storagetech2.org",
+    logo: { kind: "image", src: "/partners/st2.png", alt: "Storage Tech 2 logo" },
   },
   {
     name: "Soontech",
-    summary: "Encoded tech designs and references.",
-    logo: { kind: "text", text: "ST", ariaLabel: "Soontech" },
+    summary: "Encoded storage tech for everyone. A friendly community focused on making encoded storage technologies accessible to all Minecraft players.",
+    websiteUrl: "https://soontech.org",
+    logo: { kind: "image", src: "/partners/soontech.png", alt: "Soontech logo" },
   },
   {
     name: "Wither Archive",
-    summary: "Wither tech designs and references.",
-    logo: { kind: "text", text: "WA", ariaLabel: "Wither Archive" },
+    summary: "Break blocks better. Wither technology enthusiasts sharing the latest in wither-based automation.",
+    websiteUrl: "https://duskscorpio.github.io/wither/",
+    logo: { kind: "image", src: "/partners/wither.png", alt: "Wither Archive logo" },
   },
   {
     name: "Autocraft",
-    summary: "Autocrafting tech designs and references.",
-    logo: { kind: "text", text: "AC", ariaLabel: "Autocraft" },
+    summary: "Autocrafting made easy. A community dedicated to building and sharing autocrafting technologies in Minecraft.",
+    logo: { kind: "image", src: "/partners/autocraft.png", alt: "Autocraft logo" },
   },
 ];
 

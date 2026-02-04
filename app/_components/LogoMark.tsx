@@ -4,13 +4,18 @@ import type { LogoMark as LogoMarkType } from "@/app/_content/site";
 export function LogoMark({ logo, size = 44 }: { logo: LogoMarkType; size?: number }) {
   if (logo.kind === "image") {
     return (
-      <Image
-        src={logo.src}
-        alt={logo.alt}
-        width={size}
-        height={size}
-        className="h-11 w-11 rounded-xl object-cover ring-1 ring-border"
-      />
+      <div
+        className="flex items-center justify-center overflow-hidden rounded-xl"
+        style={{ width: size, height: size }}
+      >
+        <Image
+          src={logo.src}
+          alt={logo.alt}
+          width={size}
+          height={size}
+          className="h-full w-full object-contain"
+        />
+      </div>
     );
   }
 
@@ -24,4 +29,3 @@ export function LogoMark({ logo, size = 44 }: { logo: LogoMarkType; size?: numbe
     </div>
   );
 }
-

@@ -143,7 +143,7 @@ export default function Home() {
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {partners.map((partner) => (
               <Card key={partner.name} className="flex items-start gap-4">
-                <LogoMark logo={partner.logo} />
+                <LogoMark logo={partner.logo} size={56} />
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {partner.name}
