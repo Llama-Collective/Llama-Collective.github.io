@@ -82,12 +82,17 @@ export function SiteHeader() {
                     {item.label}
                   </Link>
 
-                  <div className="pointer-events-none absolute left-1/2 top-full w-[22rem] -translate-x-1/2 translate-y-1 pt-2 opacity-0 transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                    <div
-                      role="menu"
-                      aria-label="Solutions"
-                      className="rounded-2xl border border-border bg-background p-2 shadow-lg"
-                    >
+                  <div className="pointer-events-none absolute left-1/2 top-full w-80 -translate-x-1/2 translate-y-1 pt-4 opacity-0 transition-all group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                    <div className="relative">
+                      <div className="pointer-events-none absolute left-1/2 -top-2 z-20 -translate-x-1/2">
+                        <div className="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-accent/50" />
+                        <div className="absolute left-1/2 top-px h-0 w-0 -translate-x-1/2 border-x-[7px] border-x-transparent border-b-[7px] border-b-accent/25" />
+                      </div>
+                      <div
+                        role="menu"
+                        aria-label="Solutions"
+                        className="rounded-2xl border border-accent/50 bg-background p-2 shadow-lg backdrop-blur"
+                      >
                       <Link
                         href="/solutions"
                         aria-current={
@@ -127,6 +132,7 @@ export function SiteHeader() {
                           </Link>
                         );
                       })}
+                      </div>
                     </div>
                   </div>
                 </div>
