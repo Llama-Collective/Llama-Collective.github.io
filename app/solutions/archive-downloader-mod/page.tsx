@@ -144,27 +144,7 @@ export default function ArchiveDownloaderModPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-border/80 bg-background/90 p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                  Client snapshot
-                </p>
-                <div className="mt-3 grid grid-cols-[1fr_auto] gap-2 rounded-lg border border-border/70 p-2">
-                  <div>
-                    <div className="h-2 w-24 rounded-full bg-muted" />
-                    <div className="mt-2 space-y-1.5">
-                      <div className="h-1.5 w-full rounded bg-muted" />
-                      <div className="h-1.5 w-5/6 rounded bg-muted" />
-                      <div className="h-1.5 w-2/3 rounded bg-muted" />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-1">
-                    <div className="h-10 w-10 rounded border border-border/70 bg-muted/40" />
-                    <div className="h-10 w-10 rounded border border-border/70 bg-muted/40" />
-                    <div className="h-10 w-10 rounded border border-border/70 bg-muted/40" />
-                    <div className="h-10 w-10 rounded border border-border/70 bg-muted/40" />
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </section>
