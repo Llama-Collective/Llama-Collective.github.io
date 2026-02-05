@@ -80,6 +80,6 @@ export const solutions: SolutionCard[] = [
       src: "/solutions/archive-downloader-mod.svg",
       alt: "Archive Downloader Mod illustration",
     },
-    websiteUrl: "https://github.com/Storage-Tech-2/ST2-Downloader",
+    websiteUrl: "https://modrinth.com/mod/archive-downloader",
   },
 ];

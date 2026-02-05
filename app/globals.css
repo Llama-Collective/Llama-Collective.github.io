@@ -71,6 +71,30 @@ summary::-webkit-details-marker {
   background-position: center;
 }
 
+.submission-checklist-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #5865f2 #2b2d31;
+}
+
+.submission-checklist-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.submission-checklist-scroll::-webkit-scrollbar-track {
+  background: #2b2d31;
+  border-radius: 999px;
+}
+
+.submission-checklist-scroll::-webkit-scrollbar-thumb {
+  background: #5865f2;
+  border-radius: 999px;
+  border: 2px solid #2b2d31;
+}
+
+.submission-checklist-scroll::-webkit-scrollbar-thumb:hover {
+  background: #6f7bff;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .solution-float,
   .solution-float-delayed {

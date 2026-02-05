@@ -65,12 +65,6 @@ const groups = [
   },
 ] as const;
 
-const compatibility = [
-  "Fabric Loader",
-  "Minecraft 1.21.x",
-  "Java 21",
-  "Litematica optional",
-] as const;
 
 export default function ArchiveDownloaderModPage() {
   if (!solution) throw new Error('Missing solution: "archive-downloader-mod"');
@@ -206,46 +200,6 @@ export default function ArchiveDownloaderModPage() {
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.detail}</p>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="mt-14">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Visual blocks</h2>
-          <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            <article className="rounded-2xl border border-border bg-background/90 p-4 shadow-sm lg:col-span-2">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-border/80">
-                <Image
-                  src={solution.cardImage.src}
-                  alt={solution.cardImage.alt}
-                  fill
-                  sizes="(min-width: 1024px) 680px, 100vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Feature image area for real in-game screenshots.
-              </p>
-            </article>
-
-            <article className="solution-graphic-grid rounded-2xl border border-border bg-background/90 p-4 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-                Compatibility
-              </p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {compatibility.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-border/80 bg-background/80 px-2.5 py-1 text-xs text-muted-foreground"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-4 rounded-lg border border-border/70 p-3">
-                <div className="text-xs text-muted-foreground">Uses the same archive outputs as the web frontend.</div>
-              </div>
-            </article>
           </div>
         </section>
 

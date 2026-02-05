@@ -6,6 +6,7 @@ import { Container } from "@/app/_components/Container";
 import { getDisplayHost } from "@/app/_components/url";
 import { site, solutions } from "@/app/_content/site";
 import { SubmissionJourney } from "./SubmissionJourney";
+import { Card } from "@/app/_components/Card";
 
 const solution = solutions.find((s) => s.slug === "llamabot");
 
@@ -179,7 +180,7 @@ export default function LlamabotPage() {
                 )}
                 {solution.websiteUrl ? (
                   <ActionLink href={solution.websiteUrl} external>
-                    {host ? `Go to ${host}` : "Repository"}
+                    Go to the GitHub repository
                   </ActionLink>
                 ) : null}
               </div>
@@ -223,65 +224,58 @@ export default function LlamabotPage() {
         <SubmissionJourney items={submissionJourney} />
 
         <section className="mt-14">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Visual outputs</h2>
-          <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            <article className="rounded-2xl border border-border bg-background/90 p-4 shadow-sm lg:col-span-2">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-border/80">
-                <Image
-                  src={solution.cardImage.src}
-                  alt={solution.cardImage.alt}
-                  fill
-                  sizes="(min-width: 1024px) 680px, 100vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Branded archive workflow visual (replace with your real screenshots any time).
-              </p>
-            </article>
+           <div className="mt-10 grid gap-4 lg:grid-cols-2">
+          <Card>
+            <h2 className="text-base font-semibold text-foreground">
+              What it automates
+            </h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+              <li>Discord forums/threads for submissions, review, and curation</li>
+              <li>Mirroring approved content to a GitHub repository</li>
+              <li>Publishing an archive website from the mirrored content</li>
+            </ul>
+          </Card>
 
-            <article className="solution-graphic-grid rounded-2xl border border-border bg-background/90 p-4 shadow-sm">
-              <div className="rounded-xl border border-border/80 bg-background/90 p-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-                  Published files
-                </p>
-                <div className="mt-3 space-y-2">
-                  {outputs.map((file) => (
-                    <div
-                      key={file}
-                      className="flex items-center gap-2 rounded-md border border-border/70 bg-background/80 px-2 py-1.5 text-xs text-muted-foreground"
-                    >
-                      <Image src="/file.svg" alt="File" width={14} height={14} />
-                      <span>{file}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
+          <Card>
+            <h2 className="text-base font-semibold text-foreground">
+              Optimization and analysis
+            </h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+              <li>Automatic image optimization</li>
+              <li>World download file size reduction</li>
+              <li>Attachment analysis (for example, schematics) for metadata</li>
+            </ul>
+          </Card>
 
-        <section className="mt-14">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Who this helps</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {roles.map((role) => (
-              <article
-                key={role.title}
-                className="rounded-2xl border border-border bg-background/90 p-5 shadow-sm"
-              >
-                <h3 className="text-base font-semibold text-foreground">{role.title}</h3>
-                <ul className="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
-                  {role.points.map((point) => (
-                    <li key={point} className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+          <Card>
+            <h2 className="text-base font-semibold text-foreground">
+              Curator helpers
+            </h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+              <li>Built-in LLM assistant for formatting</li>
+              <li>Auto-linked dictionary for community terminology</li>
+              <li>Chatbot for common questions</li>
+            </ul>
+          </Card>
+
+          <Card>
+            <h2 className="text-base font-semibold text-foreground">
+              Antispam and moderation
+            </h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+              <li>Powerful spam detection and filtering</li>
+              <li>Rate limiting and anti-nuke protections</li>
+              <li>Automated role assignment for rewarding contributors and helpers</li>
+            </ul>
+          </Card>
+
+          <Card className="lg:col-span-2">
+            <h2 className="text-base font-semibold text-foreground">So much more</h2>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              A lot of work has gone into making Llamabot practically useful. Different subsystems integrate smoothly to provide a cohesive experience for curators, contributors, helpers, and users alike. Using it, you&apos;ll find your archive community running more smoothly than ever.
+            </p>
+          </Card>
+        </div>
         </section>
 
         <section className="mt-14 rounded-3xl border border-border bg-gradient-to-r from-muted/40 to-background p-6">
@@ -301,7 +295,7 @@ export default function LlamabotPage() {
             )}
             {solution.websiteUrl ? (
               <ActionLink href={solution.websiteUrl} external>
-                {host ? `View ${host}` : "View repository"}
+                Go to the GitHub repository
               </ActionLink>
             ) : null}
           </div>

@@ -97,11 +97,11 @@ export function SubmissionJourney({ items }: SubmissionJourneyProps) {
           <div className="sticky top-6 sm:top-8 lg:top-10">
             <div className="p-1 sm:p-2">
               <h2 className="text-2xl font-semibold tracking-tight text-[#f2f3f5] sm:text-3xl">
-                Submission journey
+                Submitting Designs with Llamabot
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-[#b5bac1]">
                 From initial submission to published archive entry, Llamabot
-                streamlines each step of the process.
+                streamlines each step of the submissions process.
               </p>
 
               <div className="mt-6 grid items-start gap-5 lg:grid-cols-[0.95fr_1.05fr]">
@@ -113,7 +113,7 @@ export function SubmissionJourney({ items }: SubmissionJourneyProps) {
                     <div
                       ref={checklistRef}
                       onScroll={updateChecklistFades}
-                      className="h-[360px] overflow-y-auto pr-1 sm:h-[420px] lg:h-[470px]"
+                      className="submission-checklist-scroll h-[360px] overflow-y-auto pr-1 sm:h-[420px] lg:h-[470px]"
                     >
                       <div className="space-y-2">
                         {items.map((item, index) => {
