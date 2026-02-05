@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 
 const quickFacts = [
   {
-    value: "In-game",
+    value: "In-game browsing",
     label: "Browse archive posts without leaving Minecraft",
-  },
-  {
-    value: "N key",
-    label: "Default keybind to open the browser",
   },
   {
     value: "Shared format",
     label: "Uses the same archive data as the website",
   },
   {
-    value: "Safe download",
+    value: "Litematica integration",
+    label: "Automatically loads schematics into Litematica",
+  },
+  {
+    value: "Safe downloads",
     label: "Guards around ZIP extraction and file paths",
   },
 ] as const;
