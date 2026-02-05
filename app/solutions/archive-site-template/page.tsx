@@ -18,7 +18,7 @@ export default function ArchiveSiteTemplatePage() {
 
   return (
     <div>
-      <Container className="py-12 sm:py-16">
+      <Container className="py-8 sm:py-12">
         <Link
           href="/solutions"
           className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
@@ -26,7 +26,7 @@ export default function ArchiveSiteTemplatePage() {
           ← Solutions
         </Link>
 
-        <div className="mt-8">
+        <div className="mt-4">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             {solution.name}
           </h1>

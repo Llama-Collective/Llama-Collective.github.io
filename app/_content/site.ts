@@ -58,6 +58,7 @@ export const solutions: SolutionCard[] = [
       "Discord bot that automates submissions, formatting, and publishing for archives.",
     logo: { kind: "text", text: "LB", ariaLabel: "Llamabot" },
     cardImage: { src: "/solutions/llamabot.svg", alt: "Llamabot illustration" },
+    websiteUrl: "https://github.com/Llama-Collective/LlamaBot",
   },
   {
     slug: "archive-site-template",

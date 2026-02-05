@@ -32,7 +32,7 @@ const faqs = [
 export default function FaqPage() {
   return (
     <div>
-      <Container className="py-12 sm:py-16">
+      <Container className="py-8 sm:py-12">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           FAQ
         </h1>

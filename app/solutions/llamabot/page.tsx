@@ -26,7 +26,7 @@ export default function LlamabotPage() {
           ← Solutions
         </Link>
 
-        <div className="mt-8">
+        <div className="mt-4">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             {solution.name}
           </h1>
@@ -52,7 +52,7 @@ export default function LlamabotPage() {
           )}
           {solution.websiteUrl ? (
             <ActionLink href={solution.websiteUrl} external>
-              {host ? `Go to ${host}` : "Website"}
+             Go to the Github repository
             </ActionLink>
           ) : null}
         </div>
@@ -95,21 +95,27 @@ export default function LlamabotPage() {
             <h2 className="text-base font-semibold text-foreground">
               Antispam and moderation
             </h2>
-             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
               <li>Powerful spam detection and filtering</li>
               <li>Rate limiting and anti-nuke protections</li>
-              <li>Automated role assignment for rewarding contributors and helpers</li> 
+              <li>Automated role assignment for rewarding contributors and helpers</li>
             </ul>
+          </Card>
+
+          <Card className="lg:col-span-2">
+            <h2 className="text-base font-semibold text-foreground">So much more</h2>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              A lot of work has gone into making Llamabot practically useful. Different subsystems integrate smoothly to provide a cohesive experience for curators, contributors, helpers, and users alike. Using it, you&apos;ll find your archive community running more smoothly than ever.
+            </p>
           </Card>
         </div>
 
         <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">
           <div className="text-sm font-semibold text-foreground">
-            Want to adopt Llamabot?
+            Want to try out Llamabot?
           </div>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-muted-foreground">
-            Join the Discord and describe your current process: what you accept,
-            what metadata you require, and how review works.
+            Join the Discord and try submitting an item to the demo archive.
           </p>
           <div className="mt-4">
             {site.discordInviteUrl ? (

@@ -39,9 +39,9 @@ export default function ContactPage() {
           </Card>
 
           <Card>
-            <div className="text-sm font-semibold text-foreground">Funding</div>
+            <div className="text-sm font-semibold text-foreground">Support us</div>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Llama Collective does not accept funding.
+              As a community organization, Llama Collective relies on volunteers. Donations are not accepted, support us by contributing code, ideas, or spreading the word.
             </p>
           </Card>
         </div>
