@@ -65,16 +65,28 @@
     <!-- Cards (grid preview) -->
     <rect x="300" y="244" width="120" height="146" rx="18" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="6" />
     <rect x="312" y="256" width="96" height="62" rx="14" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="6" />
+    <path d="M322 304l20-18 18 14 26-26 12 10" stroke="#CBB089" stroke-width="6" opacity="0.6" />
+    <circle cx="350" cy="276" r="7" fill="#CBB089" opacity="0.35" />
+    <rect x="386" y="268" width="14" height="10" rx="2" fill="#A1A1AA" opacity="0.35" />
     <path d="M312 338h84" stroke="#A1A1AA" stroke-width="10" opacity="0.9" />
     <path d="M312 364h62" stroke="#A1A1AA" stroke-width="10" opacity="0.85" />
 
     <rect x="434" y="244" width="120" height="146" rx="18" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="6" />
     <rect x="446" y="256" width="96" height="62" rx="14" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="6" />
+    <rect x="456" y="266" width="28" height="20" rx="6" fill="#CBB089" opacity="0.22" />
+    <path d="M490 270h40" stroke="#A1A1AA" stroke-width="8" opacity="0.35" />
+    <path d="M490 288h30" stroke="#A1A1AA" stroke-width="8" opacity="0.25" />
+    <path d="M456 304l18-14 14 10 20-18 20 16" stroke="#2563EB" stroke-width="6" opacity="0.35" />
     <path d="M446 338h86" stroke="#A1A1AA" stroke-width="10" opacity="0.9" />
     <path d="M446 364h58" stroke="#A1A1AA" stroke-width="10" opacity="0.85" />
 
     <rect x="568" y="244" width="120" height="146" rx="18" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="6" />
     <rect x="580" y="256" width="96" height="62" rx="14" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="6" />
+    <rect x="590" y="266" width="20" height="16" rx="4" fill="#CBB089" opacity="0.20" />
+    <rect x="614" y="266" width="20" height="16" rx="4" fill="#CBB089" opacity="0.30" />
+    <rect x="638" y="266" width="20" height="16" rx="4" fill="#CBB089" opacity="0.24" />
+    <path d="M592 304h72" stroke="#A1A1AA" stroke-width="8" opacity="0.28" />
+    <path d="M592 290h58" stroke="#A1A1AA" stroke-width="8" opacity="0.20" />
     <path d="M580 338h78" stroke="#A1A1AA" stroke-width="10" opacity="0.9" />
     <path d="M580 364h66" stroke="#A1A1AA" stroke-width="10" opacity="0.85" />
   </g>
