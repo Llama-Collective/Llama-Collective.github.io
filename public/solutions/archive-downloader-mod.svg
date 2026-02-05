@@ -5,25 +5,158 @@
       <stop stop-color="#FFFFFF" />
       <stop offset="1" stop-color="#F4F4F5" />
     </linearGradient>
+    <clipPath id="content-clip">
+      <rect x="70" y="124" width="660" height="256" rx="12" />
+    </clipPath>
   </defs>
 
   <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7" />
 
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <!-- Download arrow -->
-    <path d="M560 96v120" stroke="#CBB089" stroke-width="14" />
-    <path d="M512 178l48 48 48-48" stroke="#CBB089" stroke-width="14" />
+  <!-- Minecraft-mod style UI preview -->
+  <g stroke-linejoin="round" stroke-linecap="square">
+    <!-- Window frame -->
+    <rect x="55" y="44" width="690" height="366" rx="22" fill="#0B1220" stroke="#18181B" stroke-width="10" />
+    <rect x="70" y="70" width="660" height="46" rx="12" fill="#2B3446" stroke="#0F172A" stroke-width="8" />
 
-    <!-- Box (clean isometric) -->
-    <path d="M210 190l190-78 190 78-190 78-190-78z" fill="#F4F4F5" stroke="#18181B" stroke-width="10" />
-    <path d="M210 190v156l190 78V268l-190-78z" fill="#FFFFFF" stroke="#18181B" stroke-width="10" />
-    <path d="M590 190v156l-190 78V268l190-78z" fill="#FFFFFF" stroke="#18181B" stroke-width="10" opacity="0.98" />
+    <!-- Top bar controls -->
+    <rect x="84" y="82" width="132" height="22" rx="6" fill="#94A3B8" stroke="#111827" stroke-width="6" opacity="0.95" />
+    <rect x="232" y="82" width="92" height="22" rx="6" fill="#94A3B8" stroke="#111827" stroke-width="6" opacity="0.90" />
 
-    <!-- Subtle “content” lines -->
-    <path d="M148 112h230" stroke="#A1A1AA" stroke-width="10" opacity="0.9" />
-    <path d="M148 148h172" stroke="#A1A1AA" stroke-width="10" opacity="0.75" />
+    <!-- Search box -->
+    <rect x="338" y="82" width="300" height="22" rx="6" fill="#0F172A" stroke="#111827" stroke-width="6" opacity="0.95" />
+    <path d="M356 94h150" stroke="#A1A1AA" stroke-width="8" opacity="0.75" />
 
-    <!-- Accent edge -->
-    <path d="M400 112l190 78" stroke="#CBB089" stroke-width="10" opacity="0.35" />
+    <!-- Submit + close -->
+    <rect x="652" y="82" width="64" height="22" rx="6" fill="#94A3B8" stroke="#111827" stroke-width="6" opacity="0.95" />
+  
+    <!-- Content area -->
+    <rect x="70" y="124" width="660" height="256" rx="12" fill="#0F172A" stroke="#111827" stroke-width="8" opacity="0.98" />
+
+    <!-- Subtle “world” tint behind cards -->
+    <path d="M70 380c140-36 210-56 330-56s190 18 330 56v0H70z" fill="#2563EB" opacity="0.10" />
+
+    <!-- Card grid -->
+    <g clip-path="url(#content-clip)">
+      <!-- row 1 -->
+      <g transform="translate(86 140)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M12 78h72" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h52" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <g transform="translate(214 140)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <rect x="18" y="18" width="26" height="16" rx="4" fill="#CBB089" opacity="0.45" />
+        <rect x="52" y="18" width="26" height="16" rx="4" fill="#CBB089" opacity="0.25" />
+        <rect x="18" y="38" width="26" height="16" rx="4" fill="#CBB089" opacity="0.25" />
+        <rect x="52" y="38" width="26" height="16" rx="4" fill="#CBB089" opacity="0.45" />
+        <path d="M12 78h78" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h62" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <g transform="translate(342 140)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M34 18l52 28-52 8 18-36z" fill="#CBB089" opacity="0.25" />
+        <path d="M12 78h68" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h56" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="44" height="14" rx="7" fill="#DC2626" opacity="0.85" />
+      </g>
+
+      <g transform="translate(470 140)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M18 46h48" stroke="#CBB089" stroke-width="8" opacity="0.30" />
+        <path d="M12 78h84" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h60" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <g transform="translate(598 140)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <rect x="16" y="18" width="18" height="18" rx="4" fill="#CBB089" opacity="0.40" />
+        <rect x="38" y="18" width="18" height="18" rx="4" fill="#CBB089" opacity="0.25" />
+        <rect x="60" y="18" width="18" height="18" rx="4" fill="#CBB089" opacity="0.40" />
+        <path d="M12 78h86" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h58" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <!-- row 2 -->
+      <g transform="translate(86 272)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M22 50h68" stroke="#CBB089" stroke-width="8" opacity="0.25" />
+        <path d="M12 78h78" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h52" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <g transform="translate(214 272)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M16 22h80" stroke="#A1A1AA" stroke-width="8" opacity="0.55" />
+        <path d="M16 38h60" stroke="#A1A1AA" stroke-width="8" opacity="0.35" />
+        <path d="M12 78h88" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h58" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+      </g>
+
+      <g transform="translate(342 272)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M24 18h56" stroke="#CBB089" stroke-width="8" opacity="0.25" />
+        <path d="M12 78h96" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h64" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <g transform="translate(470 272)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M18 22h30" stroke="#A1A1AA" stroke-width="8" opacity="0.55" />
+        <path d="M18 38h66" stroke="#A1A1AA" stroke-width="8" opacity="0.35" />
+        <path d="M12 78h82" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h56" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+      </g>
+
+      <g transform="translate(598 272)">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" opacity="0.96" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+        <path d="M18 18l74 34" stroke="#CBB089" stroke-width="8" opacity="0.25" />
+        <path d="M18 50l74-34" stroke="#CBB089" stroke-width="8" opacity="0.18" />
+        <path d="M12 78h86" stroke="#E5E7EB" stroke-width="8" opacity="0.9" />
+        <path d="M12 94h64" stroke="#A1A1AA" stroke-width="8" opacity="0.8" />
+        <rect x="10" y="102" width="70" height="14" rx="7" fill="#16A34A" opacity="0.85" />
+        <rect x="84" y="102" width="22" height="14" rx="7" fill="#F59E0B" opacity="0.85" />
+      </g>
+
+      <!-- hint of a third row (scroll) -->
+      <g transform="translate(86 404)" opacity="0.55">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+      </g>
+      <g transform="translate(214 404)" opacity="0.55">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+      </g>
+      <g transform="translate(342 404)" opacity="0.55">
+        <rect width="116" height="118" rx="10" fill="#111827" stroke="#0B1220" stroke-width="8" />
+        <rect x="10" y="10" width="96" height="52" rx="10" fill="#1F2937" stroke="#0B1220" stroke-width="6" />
+      </g>
+    </g>
+
   </g>
 </svg>
