@@ -15,7 +15,7 @@ export default function Home() {
             For Minecraft archival communities
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Practical tooling for archive curation and publishing.
+            Practical tooling for archive curation and publishing
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
             The {site.name} builds software that helps technical Minecraft communities maintain their archives: automated submission workflows, website integration, and in-game browsing tools.
@@ -129,7 +129,8 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-semibold tracking-tight">Partners</h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-                Communities using these tools (or parts of them) to run archives.
+                Communities in the Llama Collective with archives managed using our
+                tools.
               </p>
             </div>
             <Link

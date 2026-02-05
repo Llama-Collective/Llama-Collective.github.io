@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ActionLink } from "@/app/_components/ActionLink";
 import { Card } from "@/app/_components/Card";
 import { Container } from "@/app/_components/Container";
-import { LogoMark } from "@/app/_components/LogoMark";
 import { getDisplayHost } from "@/app/_components/url";
 import { site, solutions } from "@/app/_content/site";
 
@@ -27,21 +26,18 @@ export default function ArchiveSiteTemplatePage() {
           ← Solutions
         </Link>
 
-        <div className="mt-8 flex items-start gap-4">
-          <LogoMark logo={solution.logo} />
-          <div>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              {solution.name}
-            </h1>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-muted-foreground">
-              {solution.summary}
-            </p>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
-              This is the public-facing archive site: a static front end that
-              presents mirrored content with the metadata your community
-              requires.
-            </p>
-          </div>
+        <div className="mt-8">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            {solution.name}
+          </h1>
+          <p className="mt-3 max-w-2xl text-base leading-7 text-muted-foreground">
+            {solution.summary}
+          </p>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
+            This is the public-facing archive site: a static front end that
+            presents mirrored content with the metadata your community
+            requires.
+          </p>
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">

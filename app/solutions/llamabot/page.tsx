@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ActionLink } from "@/app/_components/ActionLink";
 import { Card } from "@/app/_components/Card";
 import { Container } from "@/app/_components/Container";
-import { LogoMark } from "@/app/_components/LogoMark";
 import { getDisplayHost } from "@/app/_components/url";
 import { site, solutions } from "@/app/_content/site";
 
@@ -19,7 +18,7 @@ export default function LlamabotPage() {
 
   return (
     <div>
-      <Container className="py-12 sm:py-16">
+      <Container className="py-8 sm:py-12">
         <Link
           href="/solutions"
           className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
@@ -27,21 +26,18 @@ export default function LlamabotPage() {
           ← Solutions
         </Link>
 
-        <div className="mt-8 flex items-start gap-4">
-          <LogoMark logo={solution.logo} />
-          <div>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              {solution.name}
-            </h1>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-muted-foreground">
-              {solution.summary}
-            </p>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
-              Communities define their own archival requirements and process.
-              Llamabot runs the workflow in Discord and handles mirroring and
-              publishing around those rules.
-            </p>
-          </div>
+        <div className="mt-8">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            {solution.name}
+          </h1>
+          <p className="mt-3 max-w-2xl text-base leading-7 text-muted-foreground">
+            {solution.summary}
+          </p>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
+            Communities define their own archival requirements and process.
+            Llamabot runs the workflow in Discord and handles mirroring and
+            publishing around those rules.
+          </p>
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -67,8 +63,7 @@ export default function LlamabotPage() {
               What it automates
             </h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
-              <li>Discord forums/threads for intake, review, and curation</li>
-              <li>Required metadata and consistent formatting</li>
+              <li>Discord forums/threads for submissions, review, and curation</li>
               <li>Mirroring approved content to a GitHub repository</li>
               <li>Publishing an archive website from the mirrored content</li>
             </ul>
@@ -80,7 +75,7 @@ export default function LlamabotPage() {
             </h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
               <li>Automatic image optimization</li>
-              <li>World download optimization (when applicable)</li>
+              <li>World download file size reduction</li>
               <li>Attachment analysis (for example, schematics) for metadata</li>
             </ul>
           </Card>
@@ -90,21 +85,21 @@ export default function LlamabotPage() {
               Curator helpers
             </h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
-              <li>Built-in assistant for curator formatting and consistency</li>
-              <li>Dictionary for community terminology</li>
+              <li>Built-in LLM assistant for formatting</li>
+              <li>Auto-linked dictionary for community terminology</li>
               <li>Chatbot for common questions</li>
             </ul>
           </Card>
 
           <Card>
             <h2 className="text-base font-semibold text-foreground">
-              Rollout notes
+              Antispam and moderation
             </h2>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">
-              Most communities start with a minimal workflow (a single submission
-              category, a small reviewer group), then expand once the rules and
-              outputs match what they want.
-            </p>
+             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-muted-foreground">
+              <li>Powerful spam detection and filtering</li>
+              <li>Rate limiting and anti-nuke protections</li>
+              <li>Automated role assignment for rewarding contributors and helpers</li> 
+            </ul>
           </Card>
         </div>
 

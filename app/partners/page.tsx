@@ -8,7 +8,7 @@ import { partners, site } from "@/app/_content/site";
 export default function PartnersPage() {
   return (
     <div>
-      <Container className="py-12 sm:py-16">
+      <Container className="py-8 sm:py-12">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           Partners
         </h1>

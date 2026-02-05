@@ -10,7 +10,7 @@
     </clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="799" height="449" rx="28" fill="url(#bg)" stroke="#E4E4E7" />
+  <rect x="0.5" y="0.5" width="799" height="449" fill="url(#bg)" stroke="#E4E4E7" />
 
   <!-- Minecraft-mod style UI preview -->
   <g stroke-linejoin="round" stroke-linecap="square">
