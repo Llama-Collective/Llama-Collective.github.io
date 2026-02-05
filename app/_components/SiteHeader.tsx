@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { site, solutions } from "@/app/_content/site";
 import { Container } from "@/app/_components/Container";
 
@@ -34,13 +34,51 @@ export function SiteHeader() {
   const pathname = usePathname();
   const currentPath = useMemo(() => normalizePath(pathname), [pathname]);
   const mobileMenuRef = useRef<HTMLDetailsElement | null>(null);
+  const lastScrollYRef = useRef(0);
+  const [hideOnScroll, setHideOnScroll] = useState(false);
+  const isSolutionsRoute =
+    currentPath === "/solutions" || currentPath.startsWith("/solutions/");
 
   useEffect(() => {
     if (mobileMenuRef.current) mobileMenuRef.current.open = false;
   }, [currentPath]);
 
+  useEffect(() => {
+    lastScrollYRef.current = window.scrollY;
+
+    if (!isSolutionsRoute) return;
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollYRef.current;
+
+      if (currentY < 24) {
+        setHideOnScroll(false);
+        lastScrollYRef.current = currentY;
+        return;
+      }
+
+      if (Math.abs(delta) < 6) return;
+
+      if (delta > 0) {
+        if (!mobileMenuRef.current?.open) setHideOnScroll(true);
+      } else {
+        setHideOnScroll(false);
+      }
+
+      lastScrollYRef.current = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isSolutionsRoute]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header
+      className={`sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur transition-transform duration-300 supports-[backdrop-filter]:bg-background/60 ${
+        isSolutionsRoute && hideOnScroll ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <Container className="flex items-center gap-4 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image

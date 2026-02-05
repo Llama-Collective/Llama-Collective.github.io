@@ -69,6 +69,7 @@ export const solutions: SolutionCard[] = [
       src: "/solutions/archive-site-template.svg",
       alt: "Archive Site Template illustration",
     },
+    websiteUrl: "https://github.com/Storage-Tech-2/Storage-Tech-2.github.io",
   },
   {
     slug: "archive-downloader-mod",
@@ -79,5 +80,6 @@ export const solutions: SolutionCard[] = [
       src: "/solutions/archive-downloader-mod.svg",
       alt: "Archive Downloader Mod illustration",
     },
+    websiteUrl: "https://github.com/Storage-Tech-2/ST2-Downloader",
   },
 ];

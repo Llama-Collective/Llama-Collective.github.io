@@ -44,3 +44,36 @@ body {
 summary::-webkit-details-marker {
   display: none;
 }
+
+@keyframes solution-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.solution-float {
+  animation: solution-float 6s ease-in-out infinite;
+}
+
+.solution-float-delayed {
+  animation: solution-float 7.4s ease-in-out infinite -2.1s;
+}
+
+.solution-graphic-grid {
+  background-image:
+    linear-gradient(rgba(113, 113, 122, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(113, 113, 122, 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-float,
+  .solution-float-delayed {
+    animation: none !important;
+  }
+}
