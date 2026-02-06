@@ -69,6 +69,7 @@ const groups = [
 export default function ArchiveDownloaderModPage() {
   if (!solution) throw new Error('Missing solution: "archive-downloader-mod"');
   const host = solution.websiteUrl ? getDisplayHost(solution.websiteUrl) : null;
+  const isGithubRepo = host === "github.com";
 
   return (
     <div>
@@ -123,7 +124,7 @@ export default function ArchiveDownloaderModPage() {
                 )}
                 {solution.websiteUrl ? (
                   <ActionLink href={solution.websiteUrl} external>
-                    {host ? `Go to ${host}` : "Repository"}
+                    {isGithubRepo ? "Go to repository" : host ? `Go to ${host}` : "Repository"}
                   </ActionLink>
                 ) : null}
               </div>
@@ -222,7 +223,7 @@ export default function ArchiveDownloaderModPage() {
             )}
             {solution.websiteUrl ? (
               <ActionLink href={solution.websiteUrl} external>
-                {host ? `View ${host}` : "View repository"}
+                {isGithubRepo ? "View repository" : host ? `View ${host}` : "View repository"}
               </ActionLink>
             ) : null}
           </div>

@@ -25,6 +25,7 @@ export default function SolutionsPage() {
             const host = solution.websiteUrl
               ? getDisplayHost(solution.websiteUrl)
               : null;
+            const isGithubRepo = host === "github.com";
 
             return (
               <Card key={solution.name} className="flex !p-0 flex-col overflow-hidden">
@@ -59,7 +60,7 @@ export default function SolutionsPage() {
                         external
                         className="w-full"
                       >
-                        {host ? `Go to ${host}` : "Website"}
+                        {isGithubRepo ? "Go to repository" : host ? `Go to ${host}` : "Website"}
                       </ActionLink>
                     ) : null}
                   </div>

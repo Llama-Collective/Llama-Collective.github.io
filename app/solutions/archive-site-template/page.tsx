@@ -49,6 +49,8 @@ const groups = [
 
 export default function ArchiveSiteTemplatePage() {
   if (!solution) throw new Error('Missing solution: "archive-site-template"');
+  const host = solution.websiteUrl ? getDisplayHost(solution.websiteUrl) : null;
+  const isGithubRepo = host === "github.com";
   const liveDemoHost = getDisplayHost(liveDemoUrl);
 
   return (
@@ -104,7 +106,7 @@ export default function ArchiveSiteTemplatePage() {
                 )}
                 {solution.websiteUrl ? (
                   <ActionLink href={solution.websiteUrl} external>
-                    Go to the GitHub repository
+                    {isGithubRepo ? "Go to repository" : host ? `Go to ${host}` : "Repository"}
                   </ActionLink>
                 ) : null}
               </div>
@@ -234,7 +236,7 @@ export default function ArchiveSiteTemplatePage() {
             )}
             {solution.websiteUrl ? (
               <ActionLink href={solution.websiteUrl} external>
-                Go to the GitHub repository
+                {isGithubRepo ? "Go to repository" : host ? `Go to ${host}` : "Repository"}
               </ActionLink>
             ) : null}
           </div>

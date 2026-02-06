@@ -126,6 +126,7 @@ const outputs = ["persistent.idx", "embeddings.json", "hnsw.idx", "dictionary/co
 export default function LlamabotPage() {
   if (!solution) throw new Error('Missing solution: "llamabot"');
   const host = solution.websiteUrl ? getDisplayHost(solution.websiteUrl) : null;
+  const isGithubRepo = host === "github.com";
 
   return (
     <div>
@@ -180,7 +181,7 @@ export default function LlamabotPage() {
                 )}
                 {solution.websiteUrl ? (
                   <ActionLink href={solution.websiteUrl} external>
-                    Go to the GitHub repository
+                    {isGithubRepo ? "Go to repository" : host ? `Go to ${host}` : "Repository"}
                   </ActionLink>
                 ) : null}
               </div>
@@ -295,7 +296,7 @@ export default function LlamabotPage() {
             )}
             {solution.websiteUrl ? (
               <ActionLink href={solution.websiteUrl} external>
-                Go to the GitHub repository
+                {isGithubRepo ? "Go to repository" : host ? `Go to ${host}` : "Repository"}
               </ActionLink>
             ) : null}
           </div>
