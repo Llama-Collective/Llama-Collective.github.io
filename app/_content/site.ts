@@ -48,6 +48,11 @@ export const partners: LinkCard[] = [
     summary: "Autocrafting made easy. A community dedicated to building and sharing autocrafting technologies in Minecraft.",
     logo: { kind: "image", src: "/partners/autocraft.png", alt: "Autocraft logo" },
   },
+   {
+    name: "Cartchives",
+    summary: "Minecart technology archive.",
+    logo: { kind: "image", src: "/partners/cartchives.png", alt: "Cartchives logo" },
+  },
 ];
 
 export const solutions: SolutionCard[] = [
