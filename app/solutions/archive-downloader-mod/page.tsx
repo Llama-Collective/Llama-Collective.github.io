@@ -132,8 +132,8 @@ export default function ArchiveDownloaderModPage() {
             <div className="space-y-4">
               <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border/80">
                 <Image
-                  src={solution.cardImage.src}
-                  alt={solution.cardImage.alt}
+                  src="/solutions/mod_ui.png"
+                  alt="Archive Downloader Mod in-game UI preview"
                   fill
                   sizes="(min-width: 1024px) 460px, 100vw"
                   className="object-cover"
