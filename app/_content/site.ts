@@ -47,11 +47,13 @@ export const partners: LinkCard[] = [
     name: "Autocrafting Archive",
     summary: "Autocrafting made easy. A community dedicated to building and sharing autocrafting technologies in Minecraft.",
     logo: { kind: "image", src: "/partners/autocraft.png", alt: "Autocraft logo" },
+    websiteUrl: "https://discord.gg/guZdbQ9KQe"
   },
    {
     name: "Cartchives",
     summary: "Minecart technology archive.",
     logo: { kind: "image", src: "/partners/cartchives.png", alt: "Cartchives logo" },
+    websiteUrl: "https://discord.gg/8nGNTewveC"
   },
 ];
 
