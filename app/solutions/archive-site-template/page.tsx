@@ -7,6 +7,7 @@ import { getDisplayHost } from "@/app/_components/url";
 import { site, solutions } from "@/app/_content/site";
 
 const solution = solutions.find((s) => s.slug === "archive-site-template");
+const liveDemoUrl = "https://llamamc.org/website-template/archives";
 
 export const metadata: Metadata = {
   title: solution?.name ?? "Archive Site Template",
@@ -48,6 +49,7 @@ const groups = [
 
 export default function ArchiveSiteTemplatePage() {
   if (!solution) throw new Error('Missing solution: "archive-site-template"');
+  const liveDemoHost = getDisplayHost(liveDemoUrl);
 
   return (
     <div>
@@ -181,6 +183,30 @@ export default function ArchiveSiteTemplatePage() {
                 </ul>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-14">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Live demo</h2>
+            <a
+              href={liveDemoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-sky-600 transition-colors hover:text-sky-500"
+            >
+              {liveDemoHost ? `Open ${liveDemoHost}` : "Open live demo"}
+            </a>
+          </div>
+          <div className="relative left-1/2 mt-6 w-[calc(100dvw-4rem)] -translate-x-1/2 overflow-hidden rounded-3xl border border-border/80 bg-background shadow-sm sm:w-[calc(100dvw-10rem)]">
+            <div className="h-[68vh] min-h-[600px] max-h-[860px] w-full bg-muted/20">
+              <iframe
+                src={liveDemoUrl}
+                title="Archive Site Template live demo"
+                loading="lazy"
+                className="h-full w-full border-0"
+              />
+            </div>
           </div>
         </section>
 
