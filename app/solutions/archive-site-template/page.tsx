@@ -198,13 +198,20 @@ export default function ArchiveSiteTemplatePage() {
               {liveDemoHost ? `Open ${liveDemoHost}` : "Open live demo"}
             </a>
           </div>
-          <div className="relative left-1/2 mt-6 w-[calc(100dvw-4rem)] -translate-x-1/2 overflow-hidden rounded-3xl border border-border/80 bg-background shadow-sm sm:w-[calc(100dvw-10rem)]">
-            <div className="h-[68vh] min-h-[600px] max-h-[860px] w-full bg-muted/20">
+          <div className="mt-6 overflow-hidden rounded-3xl border border-border/80 bg-background shadow-sm">
+            <div className="relative h-[57vh] min-h-[300px] max-h-[860px] w-full bg-muted/20">
               <iframe
                 src={liveDemoUrl}
                 title="Archive Site Template live demo"
                 loading="lazy"
-                className="h-full w-full border-0"
+                className="pointer-events-none absolute left-0 top-0 h-[200%] w-[200%] origin-top-left scale-[0.5] border-0"
+              />
+              <a
+                href={liveDemoUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open live demo in a new tab"
+                className="absolute inset-0 z-10 block"
               />
             </div>
           </div>
