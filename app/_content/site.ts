@@ -69,7 +69,7 @@ export const solutions: SolutionCard[] = [
       src: "/solutions/archive-site-template.svg",
       alt: "Archive Site Template illustration",
     },
-    websiteUrl: "https://github.com/Llama-Collective/demo-archive",
+    websiteUrl: "https://github.com/Llama-Collective/website-template",
   },
   {
     slug: "archive-downloader-mod",
