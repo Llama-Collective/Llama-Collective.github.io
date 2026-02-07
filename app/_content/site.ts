@@ -26,10 +26,10 @@ export type SolutionCard = LinkCard & {
 
 export const partners: LinkCard[] = [
   {
-    name: "Storage Tech 2",
+    name: "Storage Catalog",
     summary: "The latest Minecraft storage technologies. Resources, community spaces, and tools to help you learn and develop storage technologies in Minecraft.",
-    websiteUrl: "https://storagetech2.org",
-    logo: { kind: "image", src: "/partners/st2.png", alt: "Storage Tech 2 logo" },
+    websiteUrl: "https://storagecatalog.org",
+    logo: { kind: "image", src: "/partners/sc.png", alt: "Storage Catalog logo" },
   },
   {
     name: "Soontech",
