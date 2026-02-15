@@ -55,6 +55,12 @@ export const partners: LinkCard[] = [
     logo: { kind: "image", src: "/partners/cartchives.png", alt: "Cartchives logo" },
     websiteUrl: "https://discord.gg/8nGNTewveC"
   },
+  {
+    name: "Logical Redstone Archive",
+    summary: "A public archive for logical redstone devices.",
+    logo: { kind: "image", src: "/partners/lra.png", alt: "Logical Redstone Archive logo" },
+    websiteUrl: "https://discord.gg/r7FmnacNas"
+  }
 ];
 
 export const solutions: SolutionCard[] = [
